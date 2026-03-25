@@ -8,17 +8,17 @@ set -e
 echo "Installing SFML build dependencies..."
 
 # Update package lists
-apt-get update
+sudo apt-get update
 
 # Install basic build tools
-apt-get install -y \
+sudo apt-get install -y \
     build-essential \
     cmake \
     git \
     pkg-config
 
 # Install X11 and windowing system dependencies (for Window module)
-apt-get install -y \
+sudo apt-get install -y \
     libx11-dev \
     libxrandr-dev \
     libxcursor-dev \
@@ -26,24 +26,24 @@ apt-get install -y \
     libudev-dev
 
 # Install OpenGL dependencies (for Graphics module)
-apt-get install -y \
+sudo apt-get install -y \
     libgl1-mesa-dev \
     libglu1-mesa-dev
 
 # Install FreeType and HarfBuzz dependencies (for Graphics/text rendering)
-apt-get install -y \
+sudo apt-get install -y \
     libfreetype6-dev \
     libharfbuzz-dev
 
 # Install audio codec dependencies (for Audio module)
-apt-get install -y \
+sudo apt-get install -y \
     libvorbis-dev \
     libflac-dev \
     libogg-dev \
     libopenal-dev
 
 # Clean up to reduce image size
-apt-get clean
+sudo apt-get clean
 rm -rf /var/lib/apt/lists/*
 
 echo "All dependencies installed successfully!"
