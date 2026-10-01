@@ -44,7 +44,7 @@ sudo apt-get install -y \
 
 # Clean up to reduce image size
 sudo apt-get clean
-rm -rf /var/lib/apt/lists/*
+sudo rm -rf /var/lib/apt/lists/*
 
 echo "All dependencies installed successfully!"
 echo "You can now run: cmake -S . -B build"
